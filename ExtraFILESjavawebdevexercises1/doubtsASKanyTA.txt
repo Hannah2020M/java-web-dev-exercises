@@ -1,0 +1,12 @@
+doubtsASKanyTA
+stored in E:\techRGBL621dec\doubts\1MiscDoubts2AskANyTA\1aJAva2022aprDOubts\2022d9apr
+
+
+1)6:01 PM 4/9/2022
+How do I condition updating,pushing local repo to remote repo
+when the local repo has another folder which is a git repository.
+
+   eg: javawevdevexercises1
+
+
+

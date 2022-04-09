@@ -1,0 +1,441 @@
+javawebdevexercises1aExtraFiles1a
+stored in E:\LessImp\1qLimiscJava2022Apr\Java-practice\1Ch5javaSetupDatatypesCntrlFlwCollecClsObj\Ch1Setup\2javaProjects\extraFiles2javaProjects
+C:\Users\h19sl\Documents\javawebdevexercises1\ExtraFILESjavawebdevexercises1
+git hub remote repo cloned to Documents/javewebdevexercises1
+
+
+
+
+===   6:00 PM 4/9/2022  ==+++++===============
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~
+$ cd Documents
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ cd javawebdevexercises1
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ ls
+ExtraFILESjavawebdevexercises1/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git init
+Initialized empty Git repository in C:/Users/h19sl/Documents/javawebdevexercises1/.git/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ExtraFILESjavawebdevexercises1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git commit -m"extrafiles"
+[master (root-commit) efafcdc] extrafiles
+ 1 file changed, 345 insertions(+)
+ create mode 100644 ExtraFILESjavawebdevexercises1/javawebdevexercises1aExtraFiles1a.txt
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git branch
+* master
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (master)
+$ git branch -M main
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git remote add origin https://github.com/Hannah2020M/javawebdevexercises1.git
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.65 KiB | 2.65 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Hannah2020M/javawebdevexercises1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/javawebdevexercises1 (main)
+$
+
+
+
+==  5:53 PM 4/9/2022 ++++==============
+c
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~
+$ cd Documents
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ cd 2javaProjects
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        java-practice/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ git add .
+error: 'java-practice/' does not have a commit checked out
+fatal: adding files failed
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ ls
+Add2num.java  extraFiles/  java-practice/  out/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ cd java-practice
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Ch1setupJava/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ cd add .
+bash: cd: too many arguments
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ git add .
+error: 'Ch1setupJava/' does not have a commit checked out
+fatal: adding files failed
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ cd Ch1setupJava
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        HelloWorld/
+        javawebdevexercises1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git add .
+warning: adding embedded git repository: javawebdevexercises1
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> javawebdevexercises1
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached javawebdevexercises1
+hint:
+hint: See "git help submodule" for more information.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git commit -m"added files"
+[master (root-commit) 435ab88] added files
+ 11 files changed, 59 insertions(+)
+ create mode 100644 HelloWorld/.idea/.gitignore
+ create mode 100644 HelloWorld/.idea/description.html
+ create mode 100644 HelloWorld/.idea/encodings.xml
+ create mode 100644 HelloWorld/.idea/misc.xml
+ create mode 100644 HelloWorld/.idea/modules.xml
+ create mode 100644 HelloWorld/.idea/project-template.xml
+ create mode 100644 HelloWorld/.idea/vcs.xml
+ create mode 100644 HelloWorld/HelloWorld.iml
+ create mode 100644 HelloWorld/out/production/HelloWorld/com/company/Main.class
+ create mode 100644 HelloWorld/src/com/company/Main.java
+ create mode 160000 javawebdevexercises1
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   javawebdevexercises1 (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git commit -m "files2022apr9"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   javawebdevexercises1 (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git branch -M main
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   javawebdevexercises1 (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ git commit -m"add"
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   javawebdevexercises1 (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ ls
+HelloWorld/  javawebdevexercises1/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (main)
+$ cd javawebdevexercises1
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ ls
+README.md  javawebdevexercises1.iml  lib/  out/  src/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/org/launchcode/java/demos/Hello.java
+        modified:   src/org/launchcode/java/demos/lsn1datatypes/TempConverter.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git commit -m"DOTjava files added"
+[main 138373e] DOTjava files added
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git push origin main
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 870 bytes | 870.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/Hannah2020M/java-web-dev-exercises/pull/new/main
+
+remote:
+To https://github.com/Hannah2020M/java-web-dev-exercises.git
+ * [new branch]      main -> main
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git remote add origin https://github.com/Hannah2020M/javawebdevexercises1.git
+error: remote origin already exists.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$
+
+
+==========   5:39 PM 4/9/2022   =========+++++++=========
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~
+$ cd Documents
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ ls
+ 2016TEAMcse330SSHkeyForEC2Instance.txt
+ 2javaProjects/
+ DOM-and-Events-Studio/
+ FirstProtectKidsPostponePornAndPolygamyIfYouCannotRefusePolygamyAtleastPostpone.txt
+ Git-Exercises/
+ HTTP-and-Forms-Studio/
+ JAVA/
+ LC101-studio-13/
+ LCjava2022/
+'My Music'@
+'My Pictures'@
+'My Videos'@
+ Portfolio/
+ Zoom/
+ angulatSmallGroup.txt
+ assignment-4-html-me-something-Hannah2020M/
+ communication-log-ROLE/
+ communication13studio/
+ desktop.ini
+ exerRocketSimulation/
+ feb28mon2022/
+ imp/
+ lecture12-2022/
+ lecture14-my-zoo/
+ localBelizeBreeze/
+ myTechDoubts/
+ partytracker/
+ tech/
+ techCloned/
+ test1/
+ toDo/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ cd 2javaProjects
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/h19sl/Documents/2javaProjects/.git/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ ls
+Add2num.java  extraFiles/  java-practice/  out/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects (main)
+$ cd java-practice
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (main)
+$ git init
+Initialized empty Git repository in C:/Users/h19sl/Documents/2javaProjects/java-practice/.git/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ ls
+Ch1setupJava/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice (master)
+$ cd Ch1setupJava
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ git init
+Initialized empty Git repository in C:/Users/h19sl/Documents/2javaProjects/java-practice/Ch1setupJava/.git/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ ls
+HelloWorld/  javawebdevexercises1/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava (master)
+$ cd javawebdevexercises1
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/h19sl/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1/.git/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (master)
+$ ls
+README.md  javawebdevexercises1.iml  lib/  out/  src/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (master)
+$ ^C
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (master)
+$ git branch
+* master
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (master)
+$ git branch -M main
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git remote add origin https://github.com/Hannah2020M/javawebdevexercises1.git
+error: remote origin already exists.
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$ git remote
+origin
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/2javaProjects/java-practice/Ch1setupJava/javawebdevexercises1 (main)
+$
+
+
