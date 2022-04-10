@@ -1,0 +1,256 @@
+JavaHintsLC2chDataTypes
+stored in   E:\techRGBL621dec\TechnHints\hintsJava\2022JavaHintsLC\JavaHintCh
+IMG E:RGBL621DEC\LessImp\1qLimiscJava2022Apr\Java-practice\1Ch5javaSetupDatatypesCntrlFlwCollecClsObj\Ch1Setup\HelloWorld\ImagesCh1HelloWorld
+
+exercises
+E:\techRGBL621dec\KEEPcodeAndLocationInfo\keepPicode\LCkeepCodePics\LCjava2022apr\Ch1DataTYPESjavaDASHwebDashdevDASHexercisesGITHUB2020M
+
+
+Java is a statically typed language. 
+We must declare the type of every variable and parameter in a statically 
+typed language. 
+Once the declaration is made, the variable or parameter cannot
+ refer to a value of any other type.
+
+
+The type system of a programming language is one of the most important 
+high-level characteristics that programmers use when discussing the 
+differences between languages.
+
+
+Dynamic: Python, Ruby, Javascript, PHP
+Static: Java, C, C++, C#, TypeScript
+
+Strings in Java are immutable;characters within a string can't be changed
+String staticVariable = "dog";
+char charVariable = 'd';
+
+The table below summarizes some of the most common string methods available in Java. For these examples, we use the string variable String str = "Rutabaga".
+
+String methods in Java
+Java Syntax	Description
+str.charAt(3)	Returns the character at index 3, ('a').
+str.substring(2,4)	Returns the characters from indexes 2 - 4, ("tab").
+str.length()	Returns the length of the string.
+str.indexOf('a')	Returns the index for the first occurrence of ‘a’, (3).
+str.split("delimiter")	Splits the string into sections at each delimiter and stores the sections as elements in an array.
+str.concat(string2).concat(string3)	In Java, concat concatenates only two strings. To join multiple strings, method chaining is required.
+str.trim()	Removes any whitespace at the beginning or end of the string.
+str.toUpperCase(), str.toLowerCase()	Changes all alphabetic characters in the string to UPPERCASE or lowercase, respectively.
+str.contains("text")	Searches for the specified text within a string and returns true or false.
+str.equals(otherString)	Compares strings for equality and returns a boolean.
+
+use .equals() if you need to compare two strings.
+
+2.1.3. Primitive Types
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+Java Primitive Data Types
+Data Type	Examples	Notes
+int	42	Represents positive and negative whole numbers.
+float	3.141593 and 1234.567 and 2.0	Represents positive and negative decimal numbers with up to 7 digits.
+double	3.14159265358979 and 10000.12345678912	Represents positive and negative decimal numbers with 15-16 digits.
+char	‘a’ and ‘9’ and ‘n’	A single unicode character enclosed in single quotes ''.
+boolean	true and false	Booleans in Java are NOT capitalized.
+
+the float data type sacrifices some accuracy for speed of calculation. Thus, evaluating
+ 1.11111 + 3 results in an answer of 4.1111097 instead of 4.11111.
+
+Anytime you need to perform calculations with decimal values, consider
+ using the double type instead of float
+
+Primitive data types are immutable and can be combined to build larger 
+data structures.Primitive data types do not have methods.
+
+
+String is a non-primitive data type, also called an object type. 
+object types have methods which we can call using dot notation. 
+
+Converting from a primitive type to an object type was called boxing, and 
+the reverse process (object to primitive) was called unboxing.
+In the newer versions of Java, the compiler is smart enough to know 
+when to convert back and forth, and this is called autoboxing.
+
+
+It’s a best practice to use primitives whenever possible. The primary
+ exception to this occurs when storing values in collections, 
+
+
+Each of the primitive data types has a corresponding object type:
+
+int —> Integer
+float —> Float
+double —> Double
+char —> Character
+boolean —> Boolean
+
+2.1.6. References
+Primitive Data Types (docs.oracle.com)
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+
+Autoboxing and Unboxing (docs.oracle.com)
+https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
+
+Variables (docs.oracle.com)
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
+==========+++++++================
+
+To know the type of a variable,use
+String str = "Sample String";
+        System.out.println(str.getClass().getSimpleName());
+
+
+===  10:27 PM 4/8/2022temp convrsion  ======++++++++++=================
+2.2 temp conversion
+package org.launchcode.java.demos.lsn1datatypes;
+
+import java.util.Scanner;
+
+public class TempConverter {
+    public static void main(String[] args) {
+        double fahrenheit;
+        double celsius;
+        Scanner input;
+
+        input = new Scanner(System.in);
+        System.out.println("Enter the temperature in Fahrenheit: ");
+        fahrenheit = input.nextDouble();
+        input.close();
+
+        celsius = (fahrenheit - 32) * 5/9;
+        System.out.println("The temperature in Celsius is: " + celsius + "°C");
+    }
+}
+
+........................=.........................
+Line 1 of of the program above, package org.launchcode.java.demos.lsn1datatypes; declares the package in which the file resides. For this simple program, your code could run without this line. However, you want to get used to always declaring the package of your Java classes.
+
+Packages help to encapsulate your code. Encapsulation refers to the practice of shielding your code from outside influences. 
+Line 9 the variable input references a Scanner object.
+
+============+++++++================
+
+2.3.1 ARRAYs
+int[] someInts = new int[10];
+int[] someOtherInts = {1, 1, 2, 3, 5, 8};
+To access array elements, we use square brackets and zero-based indexing.
+
+int anInt = someOtherInts[4];
+// anInt stores the integer 5.
+
+In Java, objects are structures that have a state and a set of behaviors. 
+The state of an object includes properties/data that the coder can define 
+and modify. Behaviors are actions that run when requested, and they can be
+ used to evaluate, manipulate, or return data.
+
+
+A class is a template for creating objects. In addition to the object types
+ introduced so far, any class in Java also defines a type
+
+If we have a class Cat, we can declare and create an instance of Cat using the new keyword:
+
+Cat myCat = new Cat();
+
+
+Reference variables are different from primitive types in an essential way.
+ A reference variable (such as myCat above) does not actually store the object 
+in question. Instead, it stores a reference to the object, which is literally
+ a memory address
+
+It is a rule in Java that a file containing a class marked public 
+MUST be named the same as that class.
+In Java, functions may NOT be declared outside of a class. 
+A static method is one that can be called without creating an instance of the class to which it belongs.
+To call a static method we must use the format ClassName.methodName(arguments).
+...................=...................
+
+Define the class Cat and include the static keyword before the makeNoise method name:
+
+public class Cat {
+   public static void makeNoise(String[] args) {
+      // some code
+   }
+}
+Since makeNoise is static, we do NOT need to create a Cat object to access it.
+
+Instead of doing this:
+
+Cat myCat = new Cat();     // Create a new Cat object.
+myCat.makeNoise("purr");   // Call the makeNoise method.
+We can call the method directly:
+
+Cat.makeNoise("roar");
+
+.................=....................
+
+=====   WEBSITES =====++++++++============
+https://www.delftstack.com/howto/java/how-to-check-type-of-a-variable-in-java/#:~:text=Use%20getClass().,()%20method%20via%20the%20variable.
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+
+===  7:28 AM 4/10/2022 exercises jave-web-dev-exercises Ch2DataTypes==++++
+package exercises;
+import java.util.Scanner;
+public class HelloWorld {
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hello, what is your name : ");
+        String name = input.nextLine();
+        System.out.println("Hello " + name);
+
+    }
+}
+..................=...................
+package exercises;
+import java.util.Scanner;
+
+public class Rectarea {
+    public static void main(String [] args){
+       Scanner rectlength = new Scanner(System.in);
+       System.out.println("Enter the length of the rectangle: ");
+       double length = rectlength.nextDouble();
+        System.out.println("Length of rectangle = "+ length);
+        Scanner rectwidth = new Scanner(System.in);
+        System.out.println("Enter the width of the rectangle: ");
+        double width = rectwidth.nextDouble();
+        System.out.println("Width of rectangle = "+ width);
+        double area = length * width;
+        System.out.println("Area of rectangle = "+ (area));
+    }
+}
+......................=.....................
+package exercises;
+import java.util.Scanner;
+
+public class MilesPerGallon {
+    public static void main(String [] args){
+    Scanner inputMiles = new Scanner(System.in);
+    System.out.println("Enter number of miles: ");
+    double miles = inputMiles.nextDouble();
+    Scanner inputGallons = new Scanner(System.in);
+    System.out.println("Enter number of gallons: ");
+    double gallons = inputGallons.nextDouble();
+    double mileage = miles / gallons;
+    System.out.println(mileage);
+    }
+}
+.....................=..................
+package exercises;
+import java.util.Scanner;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter seacrch word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+       // System.out.println(searchWord.split(" "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+    }
+}
+...............=..............
+========++++++++=============
+
+
+
