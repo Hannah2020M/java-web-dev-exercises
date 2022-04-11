@@ -296,6 +296,70 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin -1, 
 
 ============+++++=======================
 ===  8:16 AM 4/11/2022 MERE PRACTICE java BELOW ===+++++++++++++++====
+...   8:42 AM 4/11/2022 ....=............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenPara = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        String givenStr = givenPara.toUpperCase();
+        System.out.println(givenStr);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String userWord = input.nextLine();
+        System.out.println(userWord);
+        String searchWord = userWord.toUpperCase();
+        System.out.println(searchWord);
+        System.out.println(givenStr.contains(searchWord));
+
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+        //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+
+        String myStr;
+      myStr = givenPara.substring(0,givenPara.length());
+//  System.out.println(myStr);
+        String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr);//copy of original string by LC
+        System.out.println(myStr2);
+        String word2remove = myStr.substring(startIndex,substrAddress);
+        System.out.println(word2remove);
+        String str3 = givenStr.replaceAll(searchWord, "");
+        System.out.println(str3);
+        String str4 = myStr.replaceAll(word2remove, "");
+        System.out.println(str4);
+    }
+}
+OUTPUT
+ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+Enter search word: 
+wAs
+wAs
+WAS
+true
+6
+3
+9
+WAS
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+was
+ALICE  BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER  READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+Alice  beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister  reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+..............=..........................................
 ...8:08 AM 4/11/2022 ...................=............
 package exercises;
 import java.util.Scanner;
@@ -333,40 +397,8 @@ public class Alice {
 
     }
 }
-
-//public class Alice {
-//    public static void main(String[] args){
-//        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
-//        Scanner input = new Scanner(System.in);
-//        System.out.println("Enter search word: ");
-//        String searchWord = input.nextLine();
-//        System.out.println(givenStr.length());
-//        System.out.println(givenStr.charAt(0));
-//      // System.out.println(searchWord.split(String," "));
-//        System.out.println(searchWord.contains("a"));
-//        System.out.println(givenStr.contains(searchWord));
-//        //Assume the user enters a word that is in the sentence.
-//        // Print out its index within the string and its length.
-//
-//        int startIndex = givenStr.indexOf(searchWord);
-//        System.out.println(startIndex);
-//        System.out.println(searchWord.length());
-//       //remove the word from the string and print
-//        // the sentence again to confirm your code.
-//        int substrAddress = startIndex + searchWord.length() ;
-//        System.out.println(substrAddress);
-//        System.out.println(givenStr.substring(startIndex,substrAddress));
-////        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
-////  System.out.println(myStr);
-//    String myStr2 ;
-//        myStr2= givenStr.substring(0,givenStr.length());
-//        System.out.println(myStr2);
-//       String str3 = givenStr.replaceAll(searchWord, "");
-//       System.out.println(str3);
-//
-//    }
-//}
 OUTPUT
+ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
 Enter search word: 
 was
 was
