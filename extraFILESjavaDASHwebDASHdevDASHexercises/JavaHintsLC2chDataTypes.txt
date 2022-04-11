@@ -292,10 +292,181 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin -1, 
 	at java.base/java.lang.String.substring(String.java:1903)
 	at exercises.Alice.main(Alice.java:25)
 ...........=.....................
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenPara = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        String givenStr = givenPara.toUpperCase();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter search word: ");
+        String userWord = input.nextLine();
+        String searchWord = userWord.toUpperCase();
+        System.out.println("Search term entered by user is found in string: "+givenStr.contains(searchWord));
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println("Starting index of the search term '"+userWord+"' entered by the user: " +startIndex);
+        System.out.println("Length of the search term entered by the user( '"+userWord+"' ): "+searchWord.length());
+        int substrAddress = startIndex + searchWord.length() ;
+        String myStr = givenPara.substring(0,givenPara.length());
+        String word2remove = myStr.substring(startIndex,substrAddress);
+        System.out.println("The search term entered by the user( '"+userWord+"' ),\n is found in the given string as '"+word2remove+"'");
+        System.out.println("The original given string is :-");
+        System.out.println("        "+myStr);//copy of original string by LC
+        String str4 = myStr.replaceAll(word2remove, "");
+        System.out.println("The original given string after removing the search term '"+userWord+"' is :-");
+        System.out.println("        "+str4);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files
+\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=54755:C:
+\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" 
+-Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\2javaProjects\
+java-practice\Ch1setupJava\javawebdevexercises1\out\production\
+javawebdevexercises1 exercises.Alice
 
+Enter search word: alice
+Search term entered by user is found in string: true
+Starting index of the search term 'alice' entered by the user: 0
+Length of the search term entered by the user( 'alice' ): 5
+The search term entered by the user( 'alice' ),
+ is found in the given string as 'Alice'
+The original given string is :-
+        Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+The original given string after removing the search term 'alice' is :-
+         was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought  'without pictures or conversation?'
+
+Process finished with exit code 0
 
 ============+++++=======================
 ===  8:16 AM 4/11/2022 MERE PRACTICE java BELOW ===+++++++++++++++====
+
+
+....   9:11 AM 4/11/2022 ....=............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenPara = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        String givenStr = givenPara.toUpperCase();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String userWord = input.nextLine();
+       // System.out.println(userWord);//delete this before submitting
+        String searchWord = userWord.toUpperCase();
+      //  System.out.println(searchWord);//delete this before submitting
+        System.out.println("Search term entered by user is found in string: "+givenStr.contains(searchWord));
+
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println("Starting index of the search term '"+userWord+"' entered by the user: " +startIndex);
+        System.out.println("Length of the search term entered by the user("+userWord+"): "+searchWord.length());
+        //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+      //  System.out.println(substrAddress);//delete this before submitting
+     //   System.out.println(givenStr.substring(startIndex,substrAddress));//delete this before submitting
+
+        String myStr;
+      myStr = givenPara.substring(0,givenPara.length());
+//  System.out.println(myStr);
+     //   String myStr2 ;//delete this before submitting
+      //  myStr2= givenStr.substring(0,givenStr.length());//delete this before submitting
+         //   System.out.println(myStr2);//delete this before submitting
+        String word2remove = myStr.substring(startIndex,substrAddress);
+        System.out.println("The search term entered by the user("+userWord+"),\n is found in the given string as '"+word2remove+"'");
+        System.out.println("The original given string is :-");
+        System.out.println("        "+myStr);//copy of original string by LC
+      //  System.out.println(word2remove);//delete this before submitting
+      //  String str3 = givenStr.replaceAll(searchWord, "");//delete this before submitting
+     //   System.out.println(str3);//delete this before submitting
+        String str4 = myStr.replaceAll(word2remove, "");
+        System.out.println("The original given string after removing the search term '"+userWord+"' is :-");
+        System.out.println("        "+str4);
+    }
+}
+OUTPUT
+Enter search word: 
+alice
+Search term entered by user is found in string: true
+Starting index of the search term 'alice' entered by the user: 0
+Length of the search term entered by the user(alice): 5
+The search term entered by the user(alice),
+ is found in the given string as 'Alice'
+The original given string is :-
+        Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+The original given string after removing the search term 'alice' is :-
+         was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought  'without pictures or conversation?'
+
+Process finished with exit code 0
+
+............=....................
+.....   8:55 AM 4/11/2022 .............=...............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenPara = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        String givenStr = givenPara.toUpperCase();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String userWord = input.nextLine();
+        System.out.println(userWord);//delete this before submitting
+        String searchWord = userWord.toUpperCase();
+        System.out.println(searchWord);//delete this before submitting
+        System.out.println("Search term entered by user is found in string: "+givenStr.contains(searchWord));
+
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println("Starting index of the search term entered by the user: " +startIndex);
+        System.out.println("Length of the search term entered by the user: "+searchWord.length());
+        //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);//delete this before submitting
+        System.out.println(givenStr.substring(startIndex,substrAddress));//delete this before submitting
+
+        String myStr;
+      myStr = givenPara.substring(0,givenPara.length());
+//  System.out.println(myStr);
+        String myStr2 ;//delete this before submitting
+        myStr2= givenStr.substring(0,givenStr.length());//delete this before submitting
+        System.out.println(myStr);//copy of original string by LC
+        System.out.println(myStr2);//delete this before submitting
+        String word2remove = myStr.substring(startIndex,substrAddress);
+        System.out.println(word2remove);//delete this before submitting
+        String str3 = givenStr.replaceAll(searchWord, "");//delete this before submitting
+        System.out.println(str3);//delete this before submitting
+        String str4 = myStr.replaceAll(word2remove, "");
+        System.out.println(str4);
+    }
+}
+OUTPUT
+Enter search word: 
+Was
+Was
+WAS
+Search term entered by user is found in string: true
+Starting index of the search term entered by the user: 6
+Length of the search term entered by the user: 3
+9
+WAS
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+was
+ALICE  BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER  READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+Alice  beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister  reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+................=...................................
 ...   8:42 AM 4/11/2022 ....=............
 package exercises;
 import java.util.Scanner;
