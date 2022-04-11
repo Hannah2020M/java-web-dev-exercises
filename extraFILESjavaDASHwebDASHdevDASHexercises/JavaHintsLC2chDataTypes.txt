@@ -183,6 +183,11 @@ Cat.makeNoise("roar");
 .................=....................
 
 =====   WEBSITES =====++++++++============
+intelliJ setup
+E:RGBL621DEC\LessImp\1qLimisc\1aJAVA2022LClimisc\2022LCchLimisc\1ch10LimiscClsUTstInhrtPlymrInterfaceSpringContrlrsRuting\1ch5LimiscDttypCntrlFlwCollecClass
+
+
+
 https://www.delftstack.com/howto/java/how-to-check-type-of-a-variable-in-java/#:~:text=Use%20getClass().,()%20method%20via%20the%20variable.
 https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
 
@@ -234,6 +239,152 @@ public class MilesPerGallon {
     }
 }
 .....................=..................
+
+..IMP  7:59 PM 4/10/2022 ERROR ...=.............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+        // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+        //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+//        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+//  System.out.println(myStr);
+        String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+        String str3 = givenStr.replaceAll(searchWord, "");
+        System.out.println(str3);
+
+    }
+}
+
+OUTPUT
+Enter search word: 
+alice
+301
+A
+true
+false
+-1
+5
+4
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin -1, end 4, length 301
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3734)
+	at java.base/java.lang.String.substring(String.java:1903)
+	at exercises.Alice.main(Alice.java:25)
+...........=.....................
+
+
+============+++++=======================
+===  8:16 AM 4/11/2022 MERE PRACTICE java BELOW ===+++++++++++++++====
+...8:08 AM 4/11/2022 ...................=............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenPara = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        String givenStr = givenPara.toUpperCase();
+        System.out.println(givenStr);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String userWord = input.nextLine();
+        System.out.println(userWord);
+        String searchWord = userWord.toUpperCase();
+        System.out.println(searchWord);
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+        //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+//        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+//  System.out.println(myStr);
+        String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+        String str3 = givenStr.replaceAll(searchWord, "");
+        System.out.println(str3);
+
+    }
+}
+
+//public class Alice {
+//    public static void main(String[] args){
+//        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter search word: ");
+//        String searchWord = input.nextLine();
+//        System.out.println(givenStr.length());
+//        System.out.println(givenStr.charAt(0));
+//      // System.out.println(searchWord.split(String," "));
+//        System.out.println(searchWord.contains("a"));
+//        System.out.println(givenStr.contains(searchWord));
+//        //Assume the user enters a word that is in the sentence.
+//        // Print out its index within the string and its length.
+//
+//        int startIndex = givenStr.indexOf(searchWord);
+//        System.out.println(startIndex);
+//        System.out.println(searchWord.length());
+//       //remove the word from the string and print
+//        // the sentence again to confirm your code.
+//        int substrAddress = startIndex + searchWord.length() ;
+//        System.out.println(substrAddress);
+//        System.out.println(givenStr.substring(startIndex,substrAddress));
+////        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+////  System.out.println(myStr);
+//    String myStr2 ;
+//        myStr2= givenStr.substring(0,givenStr.length());
+//        System.out.println(myStr2);
+//       String str3 = givenStr.replaceAll(searchWord, "");
+//       System.out.println(str3);
+//
+//    }
+//}
+OUTPUT
+Enter search word: 
+was
+was
+WAS
+true
+6
+3
+9
+WAS
+ALICE WAS BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER WAS READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+ALICE  BEGINNING TO GET VERY TIRED OF SITTING BY HER SISTER ON THE BANK, AND OF HAVING NOTHING TO DO: ONCE OR TWICE SHE HAD PEEPED INTO THE BOOK HER SISTER  READING, BUT IT HAD NO PICTURES OR CONVERSATIONS IN IT, 'AND WHAT IS THE USE OF A BOOK,' THOUGHT ALICE 'WITHOUT PICTURES OR CONVERSATION?'
+
+Process finished with exit code 0
+
+.......................=............................
+
+
+====  4/10/2022    MERE PRACTICE java BELOW ++++++++++++======
 package exercises;
 import java.util.Scanner;
 public class Alice {
@@ -251,6 +402,336 @@ public class Alice {
 }
 ...............=..............
 ========++++++++=============
+
+5)
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+       // String myStr; // myStr = givenStr(String original);
+        String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+        String str3;
+       // str3 = str2.replaceAll(String (searchWord), String "rrr");
+
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "
+-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3
+\lib\idea_rt.jar=53643:C:\Program Files\JetBrains\IntelliJ IDEA Community 
+Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath
+ C:\Users\h19sl\Documents\2javaProjects\java-practice\Ch1setupJava
+\javawebdevexercises1\out\production\javawebdevexercises1 exercises.Alice
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+......   7:40 PM 4/10/2022 ....................=.....................
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+  System.out.println(myStr); //     String myStr2 ;
+//        myStr2= givenStr.substring(0,givenStr.length());
+//        System.out.println(myStr2);
+//        String str3 = myStr.replaceFirst(regex: "l", replacement: "o");
+//       System.out.println(str3);
+
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe"
+ "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community
+ Edition 2021.3.3\lib\idea_rt.jar=53762:C:\Program Files\JetBrains
+\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 
+-classpath C:\Users\h19sl\Documents\2javaProjects\java-practice
+\Ch1setupJava\javawebdevexercises1\out\production\
+javawebdevexercises1 exercises.Alice
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was sitting
+
+Process finished with exit code 0
+
+..............=......................
+......  7:43 PM 4/10/2022 ..............=.............
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+  System.out.println(myStr); //     String myStr2 ;
+//        myStr2= givenStr.substring(0,givenStr.length());
+//        System.out.println(myStr2);
+        String str3 = myStr.replaceFirst("i", "o");
+       System.out.println(str3);
+
+    }
+}
+OUTPUT
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was sitting
+Aloce was sitting
+
+Process finished with exit code 0
+
+
+........=.................
+
+..  7:46 PM 4/10/2022 ..=..................
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+//        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+//  System.out.println(myStr);
+    String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+       String str3 = givenStr.replaceFirst("i", "o");
+       System.out.println(str3);
+
+    }
+}
+OUTPUT
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+Aloce was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+,................=...............
+..  7:51 PM 4/10/2022 ....=.........
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+//        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+//  System.out.println(myStr);
+    String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+       String str3 = givenStr.replaceAll("of", " ");
+       System.out.println(str3);
+
+    }
+}
+OUTPUT
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+Alice was beginning to get very tired   sitting by her sister on the bank, and   having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use   a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+.............=..............
+..  7:54 PM 4/10/2022 ...===......................
+package exercises;
+import java.util.Scanner;
+import java.lang.String;
+public class Alice {
+    public static void main(String[] args){
+        String givenStr = "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter search word: ");
+        String searchWord = input.nextLine();
+        System.out.println(givenStr.length());
+        System.out.println(givenStr.charAt(0));
+      // System.out.println(searchWord.split(String," "));
+        System.out.println(searchWord.contains("a"));
+        System.out.println(givenStr.contains(searchWord));
+        //Assume the user enters a word that is in the sentence.
+        // Print out its index within the string and its length.
+
+        int startIndex = givenStr.indexOf(searchWord);
+        System.out.println(startIndex);
+        System.out.println(searchWord.length());
+       //remove the word from the string and print
+        // the sentence again to confirm your code.
+        int substrAddress = startIndex + searchWord.length() ;
+        System.out.println(substrAddress);
+        System.out.println(givenStr.substring(startIndex,substrAddress));
+//        String myStr = "Alice was sitting"; // myStr = givenStr(String original);
+//  System.out.println(myStr);
+    String myStr2 ;
+        myStr2= givenStr.substring(0,givenStr.length());
+        System.out.println(myStr2);
+       String str3 = givenStr.replaceAll(searchWord, "");
+       System.out.println(str3);
+
+    }
+}
+OUTPUT
+Enter search word: 
+was
+301
+A
+true
+true
+6
+3
+9
+was
+Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+Alice  beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister  reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'
+
+Process finished with exit code 0
+
+
+.............=.............
+
 
 
 
