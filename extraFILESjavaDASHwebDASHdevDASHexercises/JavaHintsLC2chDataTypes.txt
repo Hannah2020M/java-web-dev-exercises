@@ -4,6 +4,9 @@ IMG E:RGBL621DEC\LessImp\1qLimiscJava2022Apr\Java-practice\1Ch5javaSetupDatatype
 
 exercises
 E:\techRGBL621dec\KEEPcodeAndLocationInfo\keepPicode\LCkeepCodePics\LCjava2022apr\Ch1DataTYPESjavaDASHwebDashdevDASHexercisesGITHUB2020M
+studios
+C:\Users\h19sl\Documents\2javaProjects\java-practice\Ch1setupJava\studios
+https://github.com/Hannah2020M/studios
 
 
 Java is a statically typed language. 
@@ -935,6 +938,47 @@ Process finished with exit code 0
 
 .............=.............
 
+STUDIO
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the radius of a circle: ");
+        Double radius = input.nextDouble();
+        Double area = 2 * (3.14) * radius * radius;
+        System.out.println("Area of the circle = " + area);
+
+    }
+}
+
+..............-..................
+package studios.areaofacircle;
+import java.util.Scanner;
+
+public class Area {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the radius of a circle: ");
+        Double radius = input.nextDouble();
+        Double area =  3.14 * radius * radius;
+        System.out.println("Area of the circle = " + area);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 
+2021.3.3\lib\idea_rt.jar=56138:C:\Program Files\JetBrains
+\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding
+=UTF-8 -classpath C:\Users\h19sl\Documents\2javaProjects
+\java-practice\Ch1setupJava\studios\out\production\org.launchcode.java.studios.areaofacircle studios.areaofacircle.Area
+Enter the radius of a circle: 2.5
+Area of the circle = 19.625
+
+Process finished with exit code 0
 
 
 
