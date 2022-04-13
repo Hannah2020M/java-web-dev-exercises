@@ -1,0 +1,160 @@
+1aGITbashActivityjavaDASHwebDASHdevDASHexercisesArray3dot7
+stored in C:\Users\h19sl\Documents\java-web-dev-exercises\extraIMGjavaDASHwde
+
+===  6:55 AM 4/13/2022 ====++++++================
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~
+$ cd Documents
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ cd java=web=dev=exercises
+bash: cd: java=web=dev=exercises: No such file or directory
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents (main)
+$ cd java-web-dev-exercises
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ ls
+ExtraFILESjavawebdevexercises1/             java-web-dev-exercises.iml  src/
+README.md                                   lib/
+extraFILESjavaDASHwebDASHdevDASHexercises/  out/
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/exercises/Array3dot7.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/exercises/Array3dot7.java
+
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git commit -m"initial commit Array3dot7 to exercises"
+[master c22f3e9] initial commit Array3dot7 to exercises
+ 1 file changed, 15 insertions(+)
+ create mode 100644 src/exercises/Array3dot7.java
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 655 bytes | 655.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Hannah2020M/java-web-dev-exercises.git
+   577ce50..c22f3e9  master -> master
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1a.jpg
+        new file:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1bOnlyOddNumbersPrinted.jpg
+        new file:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1cCORRECTforLoop.jpg
+        new file:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1dOddNumbersONLY.jpg
+        new file:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1eSplitERROR.jpg
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1eSplitERROR.jpg
+        modified:   src/exercises/Array3dot7.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ExtraTExtFIlesJavaDASJwebDASHdevDASHexercises.txt
+
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git commit -m"2022d13apr Array3dot7 textFile2storeFileLocation"
+[master cff1a70] 2022d13apr Array3dot7 textFile2storeFileLocation
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1a.jpg
+ create mode 100644 extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1bOnlyOddNumbersPrinted.jpg
+ create mode 100644 extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1cCORRECTforLoop.jpg
+ create mode 100644 extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1dOddNumbersONLY.jpg
+ create mode 100644 extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1eSplitERROR.jpg
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1eSplitERROR.jpg
+        modified:   src/exercises/Array3dot7.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ExtraTExtFIlesJavaDASJwebDASHdevDASHexercises.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git add .
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git commit -m"2022d13apr Array3dot7 textFile2storeFileLocation"
+[master 7e77dba] 2022d13apr Array3dot7 textFile2storeFileLocation
+ 3 files changed, 20 insertions(+), 7 deletions(-)
+ create mode 100644 ExtraTExtFIlesJavaDASJwebDASHdevDASHexercises.txt
+ rewrite extraIMGjavaDASHwde/extraIMGArray3dot7ch2Exer/1eSplitERROR.jpg (72%)
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$ git push origin master
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 1.83 MiB | 412.00 KiB/s, done.
+Total 18 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/Hannah2020M/java-web-dev-exercises.git
+   c22f3e9..7e77dba  master -> master
+
+h19sl@LAPTOP-CG2SCNUS MINGW64 ~/Documents/java-web-dev-exercises (master)
+$
+
+
+
+=======  end of 6:56 AM 4/13/2022 =====++++++====
