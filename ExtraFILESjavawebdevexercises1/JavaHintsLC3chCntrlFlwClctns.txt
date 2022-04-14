@@ -1,0 +1,1101 @@
+JavaHintsLC3chCntrlFlwClctns
+stored in E:\techRGBL621dec\TechnHints\hintsJava\2022JavaHintsLC\JavaHintCh
+
+
+3.7.1
+Some characters, like a period ".", have special meanings when used with the split method. They cannot be used as-is for the deliminator.
+
+To use these characters as the deliminator, we must escape their special meanings. Instead of .split("."), we need to use .split("\\.")
+
+
+
+
+
+
+====   10:08 PM 4/12/2022 ch3 cntrlFlwClctns EXERCISES Arrays ==++++++=======
+...  3.7.1 1and 2 7:40 AM 4/13/2022 ....=.........
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+//        for (int i=0; i<l; i++) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALLelements of arr1
+        for (int i = 0; i < l; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+//       String[] arr2 = drSeuss.split(" ",5);
+//        System.out.println(arr2);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files
+\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=61113:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" 
+-Dfile.encoding=UTF-8 -classpath 
+C:\Users\h19sl\Documents\java-web-dev-exercises\out\production
+\java-web-dev-exercises exercises.Array3dot7
+
+1
+1
+3
+5
+
+Process finished with exit code 0
+
+========+++==========
+...  3.7.1 Array Practice exercises 3 ,4 and 5
+package exercises;
+
+import java.lang.String;
+import java.util.Arrays;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l1 = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        for (int i = 0; i < l1; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+        String[] arr2 = drSeuss.split(" ");
+        System.out.println(Arrays.toString(arr2));
+        System.out.println("length of arr2 = "+arr2.length);
+        String[] arr3 = drSeuss.split(",");
+        System.out.println(Arrays.toString(arr3));
+        System.out.println("length of arr3 = "+arr3.length);
+        System.out.println("         Elements of array containing the "+arr3.length+" parts  of string drSeuss :-" );
+        for (String y : arr3) System.out.println(y);
+    }
+}
+OUTPUT
+1
+1
+3
+5
+[I, would, not,, could, not,, in, a, box., I, would, not,, could, not, with, a, fox., I, will, not, eat, them, in, a, house., I, will, not, eat, them, with, a, mouse.]
+length of arr2 = 32
+[I would not,  could not,  in a box. I would not,  could not with a fox. I will not eat them in a house. I will not eat them with a mouse.]
+length of arr3 = 4
+         Elements of array containing the 4 parts  of string drSeuss :-
+I would not
+ could not
+ in a box. I would not
+ could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+
+=======+++++++++++============
+3.7.2 ArrayList practice
+package exercises;
+import java.lang.String;
+import java.util.ArrayList;
+
+public class ArrayList3dot7dot2 {
+    public static void main(String[] args) {
+        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println("Given ArrayList of integers is : \n"+evenSum);
+        System.out.println("Sum of even numbers in the given ArrayList= "+evenNumSum.getEvenSum(evenSum));
+  }
+}
+..... two files evenNumSum.java AND ArrayList3dot7dot2.java ...-....
+package exercises;
+
+import java.util.ArrayList;
+
+public class evenNumSum {
+    public static Integer getEvenSum(ArrayList<Integer> arr2sum) {
+        System.out.println("\n Even numbers in the given ArrayList :- ");
+        int sum = 0;
+        for (int i : arr2sum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i + ", ");
+                sum += i;
+            }
+        }
+        System.out.println(" ");
+        return sum;
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3
+\lib\idea_rt.jar=50465:C:\Program Files\JetBrains\IntelliJ IDEA 
+Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath 
+
+C:\Users\h19sl\Documents\java-web-dev-exercises\out\production
+\java-web-dev-exercises exercises.ArrayList3dot7dot2
+
+Given ArrayList of integers is : 
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+
+ Even numbers in the given ArrayList :- 
+54, 56, 8, 24, 98, 0,  
+Sum of even numbers in the given ArrayList= 240
+
+Process finished with exit code 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+...... Extra Detailed code......=.................
+... 3:02 AM 4/14/2022  .......=..........
+package exercises;
+
+
+import java.lang.String;
+import java.util.ArrayList;
+
+public class ArrayList3dot7dot2 {
+    public static void main(String[] args) {
+        //getEvenSum(ArrayList<Integer>);
+//        public static int getEvenSum(ArrayList<Integer> sumOfEvenNum){
+//            int sum = 0;
+        //       int sum = 0;
+//        for (int i : evenSum) {
+//            if ((i % 2 == 0)) {
+//                System.out.print(i+", ");
+//                sum += i;
+//            }
+//        }System.out.println("\n sum = "+sum);
+//        }
+        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println((evenSum));
+        int sum = 0;
+        for (int i : evenSum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i + ", ");
+                sum += i;
+            }
+        }
+        System.out.println("\n sum = " + sum);
+        System.out.println(" ");
+        System.out.println(evenNumSum.getEvenSum(evenSum));
+//        Double radius = 2.0;
+//        Double area = evenNumSum.getArea(radius);
+//        System.out.println("Area of the circle = " + area);
+    }
+}
+..... two files evenNumSum.java AND ArrayList3dot7dot2.java ........-................
+package exercises;
+
+import java.util.ArrayList;
+
+public class evenNumSum {
+    public static Integer getEvenSum(ArrayList<Integer> arr2sum) {
+        int sum = 0;
+        for (int i : arr2sum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i+", ");
+                sum += i;
+            }
+        }System.out.println("\n sum = "+sum);
+        System.out.println(" ");
+        return sum;
+    }
+}
+OUTPUT
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+54, 56, 8, 24, 98, 0, 
+ sum = 240
+ 
+54, 56, 8, 24, 98, 0, 
+ sum = 240
+ 
+240
+
+Process finished with exit code 0
+
+...   3:00 AM 4/14/2022 ....====
+package exercises;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.lang.String;
+import java.util.ArrayList;
+
+public class ArrayList3dot7dot2 {
+    public static void main(String[] args) {
+        //getEvenSum(ArrayList<Integer>);
+//        public static int getEvenSum(ArrayList<Integer> sumOfEvenNum){
+//            int sum = 0;
+ //       int sum = 0;
+//        for (int i : evenSum) {
+//            if ((i % 2 == 0)) {
+//                System.out.print(i+", ");
+//                sum += i;
+//            }
+//        }System.out.println("\n sum = "+sum);
+//        }
+        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println((evenSum));
+        // System.out.println(getEvenSum(evenSum));
+        int sum = 0;
+        for (int i : evenSum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i+", ");
+                sum += i;
+            }
+        }System.out.println("\n sum = "+sum);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib
+\idea_rt.jar=61156:C:\Program Files\JetBrains\IntelliJ IDEA Community 
+Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath 
+
+C:\Users\h19sl\Documents\java-web-dev-exercises\out\production
+\java-web-dev-exercises exercises.ArrayList3dot7dot2
+
+
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+54, 56, 8, 24, 98, 0, 
+ sum = 240
+
+Process finished with exit code 0
+
+...    2:45 AM 4/14/2022 ...-......
+package exercises;
+
+import org.launchcode.java.studios.areaofacircle.Circle;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.lang.String;
+import java.util.ArrayList;
+
+public class ArrayList3dot7dot2 {
+    public static void main(String[] args) {
+        //getEvenSum(ArrayList<Integer>);
+//        public static int getEvenSum(ArrayList<Integer> sumOfEvenNum){
+//            int sum = 0;
+ //       int sum = 0;
+//        for (int i : evenSum) {
+//            if ((i % 2 == 0)) {
+//                System.out.print(i+", ");
+//                sum += i;
+//            }
+//        }System.out.println("\n sum = "+sum);
+//        }
+        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println((evenSum));
+        // System.out.println(getEvenSum(evenSum));
+        int sum = 0;
+        for (int i : evenSum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i+", ");
+                sum += i;
+            }
+        }System.out.println("\n sum = "+sum);
+        System.out.println(" ");
+        Double radius = 2.0;
+        Double area = evenNumSum.getArea(radius);
+        System.out.println("Area of the circle = " + area);
+    }
+}
+.........2 files evenNumSum.java AND ArrayList3dot7dot2.java ..-..........
+package exercises;
+
+
+public class evenNumSum {
+    public static Double getArea(Double radius) {
+        return 3.14 * radius * radius;
+    }
+}
+OUTPUT
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+54, 56, 8, 24, 98, 0, 
+ sum = 240
+ 
+Area of the circle = 12.56
+
+Process finished with exit code 0
+
+
+....  2:07 AM 4/14/2022.....=...........
+package exercises;
+
+import org.launchcode.java.studios.areaofacircle.Circle;
+
+import java.lang.String;
+import java.util.Arrays;
+
+public class Array3dot7<y> {
+    public static Double getArea(Double radius) {
+        return 3.14 * radius * radius;
+    }
+    Double radius = 2.0;
+    Double area = getArea(radius);
+        //System.out.print ("Area of the circle = " + radius);
+
+//    public  String[] getUpper(String[] givenArray){
+//        String[] arr = givenArray;//{"array", "method", "usage"};
+//        //int l2 = givenArray.length;
+//        int l2 = arr.length;
+//        String[] strArr = new String[l2];
+//        for (int i = 0; i < l2; i++) {
+//            strArr[i] = (arr[i].toUpperCase());
+//            System.out.println(arr[i]);
+//        }
+//        System.out.println(Arrays.toString(strArr));
+//         return (Arrays.toString(strArr));
+//    }
+    public static void main(String[] args) {
+
+//    String[] arr9 = {"testing","getUpper","method"};
+//    System.out.println(getUpper(arr9));
+
+
+            int[] arr1 = {1, 1, 2, 3, 5, 8};
+            int l1 = arr1.length;
+            String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+            for (int i = 0; i < l1; i++) {
+                if ((arr1[i] % 2) != 0) {
+                    System.out.println(arr1[i]);
+                }//end of IF loopPrintsONLYoddNum in arr1
+            }//end of 1st for-each LOOP on arr1
+            String[] arr2 = drSeuss.split(" ");
+            System.out.println(Arrays.toString(arr2));
+            System.out.println("length of arr2 = " + arr2.length);
+            String[] arr3 = drSeuss.split(",");
+            System.out.println(Arrays.toString(arr3));
+            System.out.println("length of arr3 = " + arr3.length);
+            System.out.println("         Elements of array containing the " + arr3.length + " parts  of string drSeuss :-");
+            for (String y : arr3) System.out.println(y);
+
+    }
+}
+OUTPUT
+1
+1
+3
+5
+[I, would, not,, could, not,, in, a, box., I, would, not,, could, not, with, a, fox., I, will, not, eat, them, in, a, house., I, will, not, eat, them, with, a, mouse.]
+length of arr2 = 32
+[I would not,  could not,  in a box. I would not,  could not with a fox. I will not eat them in a house. I will not eat them with a mouse.]
+length of arr3 = 4
+         Elements of array containing the 4 parts  of string drSeuss :-
+I would not
+ could not
+ in a box. I would not
+ could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+
+
+
+...   6:56 PM 4/13/2022  ....=...........
+package exercises;
+
+import java.lang.String;
+import java.util.Arrays;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        String[] arr = {"array","method","usage"};
+        int l2 = arr.length;
+        String[] strArr = new String[l2];
+        for (int i = 0; i < l2; i++) {
+            strArr[i] = (arr[i].toUpperCase());
+            System.out.println(arr[i]);
+        }System.out.println(Arrays.toString(strArr));
+            int[] arr1 = {1, 1, 2, 3, 5, 8};
+            int l1 = arr1.length;
+            String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+            for (int i = 0; i < l1; i++) {
+                if ((arr1[i] % 2) != 0) {
+                    System.out.println(arr1[i]);
+                }//end of IF loopPrintsONLYoddNum in arr1
+            }//end of 1st for-each LOOP on arr1
+            String[] arr2 = drSeuss.split(" ");
+            System.out.println(Arrays.toString(arr2));
+            System.out.println("length of arr2 = " + arr2.length);
+            String[] arr3 = drSeuss.split(",");
+            System.out.println(Arrays.toString(arr3));
+            System.out.println("length of arr3 = " + arr3.length);
+            System.out.println("         Elements of array containing the " + arr3.length + " parts  of string drSeuss :-");
+            for (String y : arr3) System.out.println(y);
+
+    }
+}
+OUTPUT
+array
+method
+usage
+[ARRAY, METHOD, USAGE]
+1
+1
+3
+5
+[I, would, not,, could, not,, in, a, box., I, would, not,, could, not, with, a, fox., I, will, not, eat, them, in, a, house., I, will, not, eat, them, with, a, mouse.]
+length of arr2 = 32
+[I would not,  could not,  in a box. I would not,  could not with a fox. I will not eat them in a house. I will not eat them with a mouse.]
+length of arr3 = 4
+         Elements of array containing the 4 parts  of string drSeuss :-
+I would not
+ could not
+ in a box. I would not
+ could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+
+
+....    6:49 PM 4/13/2022 ....=................
+package exercises;
+
+import java.lang.String;
+import java.util.Arrays;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        String[] arr = {"array","method","usage"};
+        int l2 = arr.length;
+        String[] strArr = new String[l2];
+        for (int i = 0; i < l2; i++) {
+            strArr[i] = (arr[i]);
+            System.out.println(arr[i]);
+            System.out.println(Arrays.toString(strArr));
+        }
+            int[] arr1 = {1, 1, 2, 3, 5, 8};
+            int l1 = arr1.length;
+            String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+            for (int i = 0; i < l1; i++) {
+                if ((arr1[i] % 2) != 0) {
+                    System.out.println(arr1[i]);
+                }//end of IF loopPrintsONLYoddNum in arr1
+            }//end of 1st for-each LOOP on arr1
+            String[] arr2 = drSeuss.split(" ");
+            System.out.println(Arrays.toString(arr2));
+            System.out.println("length of arr2 = " + arr2.length);
+            String[] arr3 = drSeuss.split(",");
+            System.out.println(Arrays.toString(arr3));
+            System.out.println("length of arr3 = " + arr3.length);
+            System.out.println("         Elements of array containing the " + arr3.length + " parts  of string drSeuss :-");
+            for (String y : arr3) System.out.println(y);
+
+    }
+}
+OUTPUT
+array
+[array, null, null]
+method
+[array, method, null]
+usage
+[array, method, usage]
+1
+1
+3
+5
+[I, would, not,, could, not,, in, a, box., I, would, not,, could, not, with, a, fox., I, will, not, eat, them, in, a, house., I, will, not, eat, them, with, a, mouse.]
+length of arr2 = 32
+[I would not,  could not,  in a box. I would not,  could not with a fox. I will not eat them in a house. I will not eat them with a mouse.]
+length of arr3 = 4
+         Elements of array containing the 4 parts  of string drSeuss :-
+I would not
+ could not
+ in a box. I would not
+ could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+
+
+....    6:40 PM 4/13/2022 ....=...........
+package exercises;
+
+import java.lang.String;
+import java.util.Arrays;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr = {1, 1, 2, 3, 5, 8};
+        int l2 = arr.length;
+        for (int i = 0; i < l2; i++) {
+            if ((arr[i] % 2) != 0) {
+                System.out.println(arr[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1}
+        }
+            int[] arr1 = {1, 1, 2, 3, 5, 8};
+            int l1 = arr1.length;
+            String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+            for (int i = 0; i < l1; i++) {
+                if ((arr1[i] % 2) != 0) {
+                    System.out.println(arr1[i]);
+                }//end of IF loopPrintsONLYoddNum in arr1
+            }//end of 1st for-each LOOP on arr1
+            String[] arr2 = drSeuss.split(" ");
+            System.out.println(Arrays.toString(arr2));
+            System.out.println("length of arr2 = " + arr2.length);
+            String[] arr3 = drSeuss.split(",");
+            System.out.println(Arrays.toString(arr3));
+            System.out.println("length of arr3 = " + arr3.length);
+            System.out.println("         Elements of array containing the " + arr3.length + " parts  of string drSeuss :-");
+            for (String y : arr3) System.out.println(y);
+
+    }
+}
+OUTPUT
+1
+1
+3
+5
+1
+1
+3
+5
+[I, would, not,, could, not,, in, a, box., I, would, not,, could, not, with, a, fox., I, will, not, eat, them, in, a, house., I, will, not, eat, them, with, a, mouse.]
+length of arr2 = 32
+[I would not,  could not,  in a box. I would not,  could not with a fox. I will not eat them in a house. I will not eat them with a mouse.]
+length of arr3 = 4
+         Elements of array containing the 4 parts  of string drSeuss :-
+I would not
+ could not
+ in a box. I would not
+ could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+...   6:08 PM 4/13/2022  ....=.........
+
+package exercises;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.lang.String;
+import java.util.ArrayList;
+public class ArrayList3dot7dot2 {
+    public static void main(String[] args) {
+        //getEvenSum(ArrayList<Integer>);
+//        public static int getEvenSum(ArrayList<Integer> sumOfEvenNum){
+//            int sum = 0;
+//            for (int i: sumOfEvenNum) {
+//                if((i % 2 == 0 )) {
+//                    System.out.println(i);
+//                    sum += i;
+//                    System.out.println(i);
+//                    return i;
+//                }//end of IF conditional
+//            }//end of FOR loop
+//        }
+        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println((evenSum));
+        // System.out.println(getEvenSum(evenSum));
+        int sum = 0;
+        for (int i : evenSum) {
+            if ((i % 2 == 0)) {
+                System.out.print(i+", ");
+                sum += i;
+            }
+        }System.out.println("\n sum = "+sum);
+    }
+}
+OUTPUT
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+54, 56, 8, 24, 98, 0, 
+ sum = 240
+
+Process finished with exit code 0
+
+...  9:28 AM 4/13/2022 ..=....
+package exercises;
+import java.util.Arrays;
+import java.lang.String;
+import java.util.ArrayList;
+public class ArrayList3dot7dot2 {
+    public static void main (String[] args){
+    ArrayList<Integer> evenSum = new ArrayList<Integer>();
+        evenSum.add(3);
+        evenSum.add(54);
+        evenSum.add(67);
+        evenSum.add(13);
+        evenSum.add(9);
+        evenSum.add(56);
+        evenSum.add(8);
+        evenSum.add(7633);
+        evenSum.add(45);
+        evenSum.add(24);
+        evenSum.add(98);
+        evenSum.add(0);
+        System.out.println((evenSum));
+        for (int i: evenSum) {
+            if((i % 2 == 0 )) {
+                System.out.println(i);
+            }//end of IF conditional
+        }//end of FOR loop
+    }
+}
+
+OUTPUT
+[3, 54, 67, 13, 9, 56, 8, 7633, 45, 24, 98, 0]
+54
+56
+8
+24
+98
+0
+
+Process finished with exit code 0
+
+....    8:24 AM 4/13/2022  .....=.................
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l1 = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        for (int i = 0; i < l1; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+        int arr2length = 0;
+       String[] arr2 = drSeuss.split(" ");
+        for (String s : arr2) {
+            System.out.println(s);
+            arr2length = arr2length +1 ;
+        }
+        System.out.println("arr2length = "+arr2length);
+        System.out.print("arr2[0]  : ");
+        System.out.println(arr2[0]);
+        int l = arr2length - 1;
+        String[] splitStrArray = new String[l];
+        System.out.println(splitStrArray[0]);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=59645:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\java-web-dev-exercises\out\production\java-web-dev-exercises exercises.Array3dot7
+1
+1
+3
+5
+I
+would
+not,
+could
+not,
+in
+a
+box.
+I
+would
+not,
+could
+not
+with
+a
+fox.
+I
+will
+not
+eat
+them
+in
+a
+house.
+I
+will
+not
+eat
+them
+with
+a
+mouse.
+arr2length = 32
+arr2[0]  : I
+null
+
+Process finished with exit code 0
+
+
+
+...   8:12 AM 4/13/2022  .....=..........
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        System.out.println("length of arr1: "+l);
+        //        for (int i=0; i<l; i++) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALL elements of arr1
+        for (int i = 0; i < l; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+        int arr2length = 0;
+       String[] arr2 = drSeuss.split(" ");
+
+        for (String s : arr2) {
+
+            System.out.println(s);
+            System.out.println("arr2length = "+arr2length);
+            arr2length = arr2length +1 ;
+        }
+       // System.out.println(drSeuss.split(" "));
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=59555:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\java-web-dev-exercises\out\production\java-web-dev-exercises exercises.Array3dot7
+length of arr1: 6
+1
+1
+3
+5
+I
+arr2length = 0
+would
+arr2length = 1
+not,
+arr2length = 2
+could
+arr2length = 3
+not,
+arr2length = 4
+in
+arr2length = 5
+a
+arr2length = 6
+box.
+arr2length = 7
+I
+arr2length = 8
+would
+arr2length = 9
+not,
+arr2length = 10
+could
+arr2length = 11
+not
+arr2length = 12
+with
+arr2length = 13
+a
+arr2length = 14
+fox.
+arr2length = 15
+I
+arr2length = 16
+will
+arr2length = 17
+not
+arr2length = 18
+eat
+arr2length = 19
+them
+arr2length = 20
+in
+arr2length = 21
+a
+arr2length = 22
+house.
+arr2length = 23
+I
+arr2length = 24
+will
+arr2length = 25
+not
+arr2length = 26
+eat
+arr2length = 27
+them
+arr2length = 28
+with
+arr2length = 29
+a
+arr2length = 30
+mouse.
+arr2length = 31
+
+Process finished with exit code 0
+
+
+
+....    7:58 AM 4/13/2022 .....=..................
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+        System.out.println("length of arr1: "+l);
+        //        for (int i=0; i<l; i++) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALL elements of arr1
+        for (int i = 0; i < l; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+
+       String[] arr2 = drSeuss.split(" ");
+        for (String s : arr2) {
+            System.out.println(s);
+        }
+    }
+}
+OUTPUT
+length of arr1: 6
+1
+1
+3
+5
+I
+would
+not,
+could
+not,
+in
+a
+box.
+I
+would
+not,
+could
+not
+with
+a
+fox.
+I
+will
+not
+eat
+them
+in
+a
+house.
+I
+will
+not
+eat
+them
+with
+a
+mouse.
+
+Process finished with exit code 0
+
+
+
+.....  7:43 AM 4/13/2022 .....=..................
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+//        for (int i=0; i<l; i++) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALLelements of arr1
+        for (int i = 0; i < l; i++) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+       String[] arr2 = drSeuss.split(" ",5);
+        for (String s : arr2)
+        System.out.println(s);
+    }
+}
+OUTPUT
+1
+1
+3
+5
+I
+would
+not,
+could
+not, in a box. I would not, could not with a fox. I will not eat them in a house. I will not eat them with a mouse.
+
+Process finished with exit code 0
+
+
+...   7:10 AM 4/13/2022 ...
+package exercises;
+import java.lang.String;
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+        int l = arr1.length;
+        String drSeuss = "I would not, could not, in a box. I would not, could 
+not with a fox. I will not eat them in a house. I will not eat them with a mouse.";
+//        for (int i=0; i<l; i++) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALLelements of arr1
+
+//        for (int i=0; i<l; i++) {
+//            if ((arr1[i] % 2) != 0) {
+//                System.out.println(arr1[i]);
+//            }//end of IF loopPrintsONLYoddNum in arr1
+        System.out.println("Printing ot elements of arr1 using FOR-EACH loop:- ");
+        for (int i : arr1) System.out.println(arr1[i]);
+       String[] arr2 = drSeuss.split(" ",5);
+        for (String s : arr2)
+        System.out.println(s);
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\
+JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=60957:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" 
+-Dfile.encoding=UTF-8 -classpath
+
+ C:\Users\h19sl\Documents\java-web-dev-exercises\out\production
+\java-web-dev-exercises exercises.Array3dot7
+
+Printing ot elements of arr1 using FOR-EACH loop:- 
+1
+1
+2
+3
+8
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 6
+	at exercises.Array3dot7.main(Array3dot7.java:17)
+
+Process finished with exit code 1
+
+
+......=............................
+....    11:55 PM 4/12/2022 ....=.....
+package exercises;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+//        for (int i : arr1) {
+//            System.out.println(arr1[i]);
+//        }//end of 1st for-each LOOP on arr1 to printALLelements of arr1
+        for (int i : arr1) {
+            if ((arr1[i] % 2) != 0) {
+                System.out.println(arr1[i]);
+            }//end of IF loopPrintsONLYoddNum in arr1
+        }//end of 1st for-each LOOP on arr1
+    }
+}
+OUTPUT
+1
+1
+3
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 6
+	at exercises.Array3dot7.main(Array3dot7.java:10)
+
+Process finished with exit code 1
+
+......................=...................
+
+...   10:10 PM 4/12/2022 ....=........
+package exercises;
+
+public class Array3dot7 {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 1, 2, 3, 5, 8};
+//        int l = arr1.length();
+//        for (int i=0; i<l; i++){
+//
+//        }//end of 1st arr1 FOR loop
+
+        for (int i : arr1) {
+            System.out.println(arr1[i]);
+        }//end of 1st for-each LOOP on arr1
+    }
+}
+OUTPUT
+"C:\Program Files\Java\jdk-15.0.2\bin\java.exe" "-javaagent:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib
+\idea_rt.jar=51685:C:\Program Files\JetBrains\IntelliJ IDEA Community 
+Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath 
+
+C:\Users\h19sl\Documents\java-web-dev-exercises\out\production\
+java-web-dev-exercises exercises.Array3dot7
+1
+1
+2
+3
+8
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 8 out of bounds for length 6
+	at exercises.Array3dot7.main(Array3dot7.java:12)
+
+Process finished with exit code 1
+
+........=.............................
+====   end of  10:08 PM 4/12/2022 ch3 cntrlFlwClctns EXERCISES Arrays  ++===
