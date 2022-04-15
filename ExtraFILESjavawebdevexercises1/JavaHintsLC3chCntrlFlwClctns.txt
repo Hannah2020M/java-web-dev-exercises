@@ -1099,3 +1099,74 @@ Process finished with exit code 1
 
 ........=.............................
 ====   end of  10:08 PM 4/12/2022 ch3 cntrlFlwClctns EXERCISES Arrays  ++===
+
+
+==  6:32 PM 4/14/2022v lecture2 ==++++
+package lecturesQuestions;
+import java.util.Array;
+import java.util.ArrayList;
+
+public class ArrayLecture2apr14thu2022 {
+    public static void main(String[] args) {
+//    int[] arr = new int[10];
+//    System.out.println.Arrays.toString(arr);
+//        ArrayList<Integer> evenSum = new ArrayList<Integer>();
+//        evenSum.add(3);
+//        evenSum.add(54);
+
+        HashMap<String, Double> students = new HashMap<>();
+        Scanner input = new Scanner(System.in);
+        String newStudent;
+
+        map.put("firstName","Emma");
+        for (String key: map.keySet()){
+            System.out.println("key: "+key);
+            System.out.println("value: "+ map.get(key));
+            System.out.println(key + " : "+map.get(key));
+
+
+        }
+    }
+
+}
+OUTPUT
+
+======+++++++=========
+
+package org.launchcode.java.studios.areaofacircle;
+
+import java.util.Scanner;
+import java.lang.String;
+
+public class studio3dot8CharCount {
+    public static void main(String[] args) {
+
+        String myStr = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
+
+        System.out.println(myStr);
+
+        char[] charactersInString = myStr.toCharArray();
+        int l = myStr.length();
+        System.out.println(l);
+    //    HashMap<String, int> results = new HashMap<>();
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter character: ");
+        String userWord = input.nextLine();
+        System.out.println("user entered : "+userWord);
+        for (int i = 0; i < l; i++) {
+            //System.out.println(myStr.charAt(i));
+
+        }
+
+    }
+}
+OUTPUT
+jdk-15.0.2\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\lib\idea_rt.jar=50534:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.3.3\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\h19sl\Documents\java-web-dev-exercises\out\production\java-web-dev-exercises org.launchcode.java.studios.areaofacircle.studio3dot8CharCount
+If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.
+338
+Enter character: 
+r
+user entered : r
+
+Process finished with exit code 0
+

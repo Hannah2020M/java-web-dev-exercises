@@ -7,3 +7,39 @@ E:\techRGBL621dec\doubts\1MiscDoubts2AskANyTA\1aJAva2022aprDOubts\
 2022d13aprCh3dot7ArrayExer
 
 Type something
+
+package org.launchcode.java.studios.areaofacircle;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.lang.String;
+
+public class studio3dot8CharCount {
+    public static void main(String[] args) {
+        String myStr = "If the product of two terms is zero then common sense says at least one of the two terms has to be zero to start with. So if you move all the terms over to one side, you can put the quadratics into a form that can be factored allowing that side of the equation to equal zero. Once you’ve done that, it’s pretty straightforward from there.";
+        char[] charactersInString = myStr.toCharArray();
+        int l = myStr.length();
+        System.out.println(l);
+       HashMap<Character, Integer> results = new HashMap<>();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter character: ");
+        String userWord = input.nextLine();
+        System.out.println("user entered : "+userWord);
+        int c = 0;
+        for (int i = 0; i < l; i++) {
+        // System.out.println(myStr.contains(userWord));
+            System.out.println(charactersInString[i]);
+            if(charactersInString[i].equals(userWord)){
+                c++;
+                System.out.println(myStr.charAt[i]);
+            } System.out.println(c);
+            //System.out.println(myStr.charAt(i));
+             //  c = Character.char(userWord);
+        }
+
+    }
+}
+
+C:\Users\h19sl\Documents\java-web-dev-exercises\src\org\launchcode\java\studios\areaofacircle\studio3dot8CharCount.java:21:37
+java: char cannot be dereferenced
+
+
