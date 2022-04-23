@@ -3,6 +3,10 @@ stored in E:\LessImp\1qLimiscJava2022Apr\Java-practice\1Ch5javaSetupDatatypesCnt
 C:\Users\h19sl\Documents\javawebdevexercises1\ExtraFILESjavawebdevexercises1
 git hub remote repo cloned to Documents/javewebdevexercises1
 
+FORKED repos LC
+GradedAsgnmt1 techjobsConsoleJava
+https://github.com/Hannah2020M/techjobs-console-java
+
 ==   6:10 PM 4/9/2022 not pushing src folder copied into local
  javawebdevexercises1 to https://github.com/Hannah2020M/javawebdevexercises1.git
 ===++++++++++++++===============

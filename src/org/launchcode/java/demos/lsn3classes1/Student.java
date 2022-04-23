@@ -9,5 +9,63 @@ public class Student {
     private int studentId;
     private int numberOfCredits = 0;
     private double gpa = 0.0;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String aName) {
+        name = aName;
+    }
+    public int getstudentId() {
+        return studentId;
+    }
+
+    public void setstudentId(String aStudentId) {
+        name = aStudentId;
+    }
+    public int getNumberOfCredits() {
+        return numberOfCredits;
+    }
+
+    private void setNumberOfCredits(String aNumberOfCredits) {
+        name = aNumberOfCredits;
+    }
+    public int getGPA() {
+        return gpa;
+    }
+
+    public void setGPA(String aGPA) {
+        name = aGPA;
+    }
+    Student IndianStudent = new Student();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String aName) {
+        name = aName;
+    }
+    public int getstudentId() {
+        return studentId;
+    }
+
+    public void setstudentId(String aStudentId) {
+        name = aStudentId;
+    }
+    public int getNumberOfCredits() {
+        return numberOfCredits;
+    }
+
+    private void setNumberOfCredits(int aNumberOfCredits) {
+        numberOfCredits = aNumberOfCredits;
+    }
+
+    public int getGPA() {
+        return gpa;
+    }
+
+    public void setGPA(double aGPA) {
+        gpa = 4.0;
+    }
 
 }

@@ -3,9 +3,12 @@ stored in E:\techRGBL621dec\TechnHints\hintsJava\2022JavaHintsLC\JavaHintCh
 
 
 3.7.1
-Some characters, like a period ".", have special meanings when used with the split method. They cannot be used as-is for the deliminator.
+Some characters, like a period ".", have special meanings when used with 
+the split method. They cannot be used as-is for the deliminator.
 
-To use these characters as the deliminator, we must escape their special meanings. Instead of .split("."), we need to use .split("\\.")
+To use these characters as the deliminator, we must escape their special
+ meanings. Instead of .split("."), we need to use .split("\\.")
+
 
 
 
